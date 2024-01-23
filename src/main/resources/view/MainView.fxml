@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.Controller.MainController">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2F3F4;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.Controller.MainController">
    <children>
       <Label alignment="CENTER" layoutX="108.0" layoutY="25.0" prefHeight="54.0" prefWidth="384.0" text="File Copy App" textAlignment="CENTER" textFill="#4187ba" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="108.0">
          <font>
-            <Font size="25.0" />
+            <Font name="DejaVu Serif Bold" size="25.0" />
          </font>
       </Label>
       <TextField fx:id="txtSourceFile" editable="false" layoutX="57.0" layoutY="157.0" prefHeight="24.0" prefWidth="405.0">
@@ -21,18 +21,30 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>
       </TextField>
-      <Button fx:id="btnSource" layoutX="492.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnSourceOnAction" prefHeight="24.0" prefWidth="75.0" text="Browse" />
-      <Label layoutX="57.0" layoutY="131.0" text="Select Source File:" />
-      <Label layoutX="57.0" layoutY="218.0" text="Select the Target Directory:" />
+      <Button fx:id="btnSource" layoutX="489.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnSourceOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #6495ED;" text="Browse" />
+      <Label layoutX="57.0" layoutY="131.0" text="Select Source File:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="218.0" text="Select the Target Directory:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
       <TextField fx:id="txtTargetFile" editable="false" layoutX="57.0" layoutY="245.0" prefHeight="24.0" prefWidth="405.0">
          <padding>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>
       </TextField>
-      <Button fx:id="btnTarget" layoutX="492.0" layoutY="245.0" mnemonicParsing="false" onAction="#btnTargetOnAction" prefHeight="24.0" prefWidth="75.0" text="Browse" />
-      <Button fx:id="btnCopy" layoutX="263.0" layoutY="285.0" mnemonicParsing="false" onAction="#btnCopyOnAction" prefHeight="24.0" prefWidth="75.0" text="Copy" />
+      <Button fx:id="btnTarget" layoutX="489.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnTargetOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #6495ED;" text="Browse" />
+      <Button fx:id="btnCopy" layoutX="254.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnCopyOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #F5B7B1;" text="Copy" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="254.0">
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </Button>
       <ProgressBar fx:id="pbBar" layoutX="57.0" layoutY="355.0" prefHeight="20.0" prefWidth="514.0" progress="0.0" />
       <Label fx:id="lblStatus" layoutX="57.0" layoutY="336.0" text="Copied 0/1250 Bytes" />
-      <Label fx:id="lblProgress" layoutX="477.0" layoutY="336.0" text="Progress:50%" />
+      <Label fx:id="lblProgress" layoutX="477.0" layoutY="336.0" text="Progress:100%" />
    </children>
 </AnchorPane>
